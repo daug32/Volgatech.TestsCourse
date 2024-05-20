@@ -5,13 +5,15 @@ namespace Lab1.Tests.Parsers;
 public class TestCasesFileParser
 {
     private readonly string _testCasesFilePath;
+    private readonly ParsingSettings _settings;
 
-    public TestCasesFileParser( string testCasesFilePath )
+    public TestCasesFileParser( string testCasesFilePath, ParsingSettings? settings = null )
     {
         _testCasesFilePath = testCasesFilePath;
+        _settings = settings ?? new ParsingSettings();
     }
 
-    public List<CheckTriangleTypeTestCase> Parse()
+    public List<CheckTriangleTypeTestCase> Parse(  )
     {
         var result = new List<CheckTriangleTypeTestCase>();
 
@@ -29,7 +31,7 @@ public class TestCasesFileParser
             }
 
             // Skip comments
-            if ( sanitizedLine.StartsWith( Settings.SingleLineComment ) )
+            if ( sanitizedLine.StartsWith( _settings.SingleLineComment ) )
             {
                 continue;
             }
@@ -53,7 +55,7 @@ public class TestCasesFileParser
 
     private CheckTriangleTypeTestCase ParseSingleTestCase( string line )
     {
-        string[] testCaseParts = line.Split( Settings.ExpectedResultSeparator );
+        string[] testCaseParts = line.Split( _settings.ExpectedResultSeparator );
         return new CheckTriangleTypeTestCase(
             testCaseParts[0],
             testCaseParts[1] );
