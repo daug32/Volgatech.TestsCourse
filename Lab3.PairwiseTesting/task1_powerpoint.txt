@@ -1,0 +1,30 @@
+﻿Font:       Arial, Roboto
+FontSize:   1, 4000
+Lettering:  Regular, Cursive, SemiBold, SemiBoldCursive
+Color:      Black, Gray, White
+
+Underlining:            NotUsed, Common, Dashed
+UnderliningColor:       NotUsed, Black, Gray, White
+Strikethrough:          True, False
+DoubleStrikethrough:    True, False
+
+SuperscriptText:    True, False
+SublineText:        True, False
+Shift:              -100, -25, 0, 30, 100
+
+AllCaps:        True, False
+SmallCaps:      True, False
+AlignHeight:    True, False
+
+IF [Underlining] = "NotUsed" THEN [UnderliningColor] = "NotUsed" ELSE [UnderliningColor] <> "NotUsed";
+IF [Strikethrough] = "True" THEN [DoubleStrikethrough] = "False";
+IF [DoubleStrikethrough] = "True" THEN [Strikethrough] = "False";
+
+IF [SuperscriptText] = "True" THEN [SublineText] = "False" AND [Shift] > 0;
+IF [SublineText] = "True" THEN [SuperscriptText] = "False" AND [Shift] < 0;
+IF [Shift] > 0 THEN [SublineText] = "False" AND [SuperscriptText] = "True";
+IF [Shift] = 0 THEN [SublineText] = "False" AND [SuperscriptText] = "False";
+IF [Shift] < 0 THEN [SublineText] = "True" AND [SuperscriptText] = "False";
+
+IF [AllCaps] = "True" THEN [SmallCaps] = "False";
+IF [SmallCaps] = "True" THEN [AllCaps] = "False";

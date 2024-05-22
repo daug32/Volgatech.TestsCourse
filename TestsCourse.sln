@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1.Tests", "Lab1.Tests\La
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2.EquivalenceClasses", "Lab2.EquivalenceClasses\Lab2.EquivalenceClasses.csproj", "{5E9E8A5C-96AD-4E83-A2A7-E227881EC5EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab3.PairwiseTesting", "Lab3.PairwiseTesting\Lab3.PairwiseTesting.csproj", "{76391A87-6F67-4AB8-9873-625BA1E01554}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{5E9E8A5C-96AD-4E83-A2A7-E227881EC5EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E9E8A5C-96AD-4E83-A2A7-E227881EC5EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E9E8A5C-96AD-4E83-A2A7-E227881EC5EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76391A87-6F67-4AB8-9873-625BA1E01554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76391A87-6F67-4AB8-9873-625BA1E01554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76391A87-6F67-4AB8-9873-625BA1E01554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76391A87-6F67-4AB8-9873-625BA1E01554}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
