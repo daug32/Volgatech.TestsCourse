@@ -1,22 +1,24 @@
-﻿Font:       Arial, Roboto
-FontSize:   1, 4000
+﻿Font:       Caligraphic|KunstlerScript, SerifFont|TimesNewRoman, SansSerifFont|Arial, HandwrittingFont|SegoeScript, IndustrialFont|Stencil
+FontSize:   1, 20, 4000
 Lettering:  Regular, Cursive, SemiBold, SemiBoldCursive
-Color:      Black, Gray, White
+Color:      ThemeColorBlack, DefaultColorBlue, ColorHexagonBlack, ColorPickerRgbBlack
 
 Underlining:            NotUsed, Common, Dashed
-UnderliningColor:       NotUsed, Black, Gray, White
+UnderliningColor:       NotUsed, ThemeColorBlack, DefaultColorBlue, ColorHexagonBlack, ColorPickerRgbBlack
 Strikethrough:          True, False
 DoubleStrikethrough:    True, False
 
 SuperscriptText:    True, False
 SublineText:        True, False
-Shift:              -100, -25, 0, 30, 100
+Shift:              -100, -1, 0, 1, 100
 
 AllCaps:        True, False
 SmallCaps:      True, False
 AlignHeight:    True, False
 
-IF [Underlining] = "NotUsed" THEN [UnderliningColor] = "NotUsed" ELSE [UnderliningColor] <> "NotUsed";
+IF [Underlining] = "NotUsed" 
+    THEN [UnderliningColor] = "NotUsed"
+    ELSE [UnderliningColor] <> "NotUsed";
 IF [Strikethrough] = "True" THEN [DoubleStrikethrough] = "False";
 IF [DoubleStrikethrough] = "True" THEN [Strikethrough] = "False";
 
